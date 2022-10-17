@@ -1,5 +1,6 @@
 import discord
 import sys
+import os
 
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
@@ -32,5 +33,6 @@ async def on_message(message):
         
         await message.delete()
             
+token = os.environ["BOT_TOKEN"]
 
-client.run('MTAzMDI3NTkwMTQxNTUxMDA5Ng.GzOza8.LF3hV8G8FQsjbpZRm8N3qQJZqswGft9s5gj-qY')
+client.run(token)
