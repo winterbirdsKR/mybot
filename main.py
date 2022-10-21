@@ -26,9 +26,9 @@ async def on_message(message):
     if message.channel.id == 1031373432501305397:
         server = client.get_guild(1029765705203204201)
         role = server.get_role(1031372933895032992)
-        if message.content == '!입장 sex1112':
+        if message.content == '!입장 11131112':
             await message.author.add_roles(role)
-        elif message.content == '!퇴장 sex1112':
+        elif message.content == '!퇴장 11131112':
             await message.author.remove_roles(role)
         
         await message.delete()
