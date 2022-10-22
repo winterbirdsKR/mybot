@@ -33,8 +33,12 @@ async def on_message(message):
         user = server.get_member(message.author.id)
         if message.content == '!입장 ' + password:
             await user.add_roles(role)
+            await message.channel.send('음지에 입장하셨습니다. 뒤를 조심하세요')
         elif message.content == '!퇴장 '+ password:
             await user.remove_roles(role)
+            await message.channel.send('음지에서 퇴장하셨습니다. 이제 안심하셔도 될것같네요')
+        else:
+            await message.channel.send('아마도 비밀번호가 틀린것같아요')
 
             
 
